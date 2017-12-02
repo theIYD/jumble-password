@@ -1,10 +1,12 @@
 {
   "name": "jumble-pass",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Create your passwords easily",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-win": "electron-packager . jumble-pass --overwrite --platform=win32 --arch=ia32 --icon=media/logos/win.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Jumble Password App\"",
+    "package-linux": "electron-packager . jumble-pass --overwrite --platform=linux --arch=x64 --icon=media/logos/linux.png --prune=true --out=release-builds"
   },
   "keywords": [
     "Electron",
@@ -13,6 +15,7 @@
   "author": "Idrees Dargahwala",
   "license": "MIT",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "~1.7.8",
+    "electron-packager": "^10.1.0"
   }
 }

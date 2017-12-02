@@ -2,13 +2,25 @@ const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const url = require('url')
 
+const isDev = ('ELECTRON_IS_DEV' in process.env) ? (parseInt(process.env.ELECTRON_IS_DEV, 10) === 1) : (process.defaultApp || /node_modules[\\/]electron[\\/]/.test(process.execPath));
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({width: 800, height: 600, autoHideMenuBar: true, frame: false, backgroundColor: 'rgb(19,17,15)', show: false})
+  let config = {
+    width: 800,
+    height: 600,
+    autoHideMenuBar: true,
+    frame: false,
+    backgroundColor: 'rgb(19,17,15)',
+    show: false,
+    icon: path.join(__dirname, 'media/logos/linux.png')
+  };
+
+  win = new BrowserWindow(config);
 
   // and load the index.html of the app.
   win.loadURL(url.format({
@@ -17,9 +29,11 @@ function createWindow () {
     slashes: true
   }))
 
-  // Open the DevTools.
-  win.webContents.openDevTools()
-
+  if(isDev) {
+    // Open the DevTools.
+    win.webContents.openDevTools()
+  }
+  
   win.once('ready-to-show', () => {
       win.show()
   })

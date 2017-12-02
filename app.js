@@ -1,13 +1,19 @@
 console.log('App is running.');
 
 const remote = require('electron').remote;
+const shell = require('electron').shell;
 
 const form = document.querySelector('#form');
 const submit = document.querySelector('#submitBtn');
 const passDiv = document.querySelector('#password');
+const author = document.querySelector('#author');
 const closeBtn = document.querySelector('#close');
 
 form.addEventListener('submit', init);
+author.addEventListener('click', () => {
+    shell.openExternal('https://theiyd.github.io/theidrees.me/');
+});
+
 closeBtn.addEventListener('click', () => {
     remote.getCurrentWindow().close();
 });
