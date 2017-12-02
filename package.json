@@ -1,0 +1,18 @@
+{
+  "name": "jumble-pass",
+  "version": "0.1.0",
+  "description": "Create your passwords easily",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron",
+    "Passwords"
+  ],
+  "author": "Idrees Dargahwala",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  }
+}
