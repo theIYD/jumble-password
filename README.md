@@ -19,6 +19,8 @@ $ npm start
 
 ```
 
+# ![screen](https://github.com/theIYD/jumble-password/blob/master/media/screen.gif)
+
 ## License
 
 ```
