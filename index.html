@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
+  </head>
+  <style>
+      html {
+        -webkit-app-region:drag;
+      }
+      body {
+        background-color: rgb(19,17,15);
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+      }
+      .wrapper {
+        text-align: center;
+        margin-top: 4em;
+        -webkit-app-region: no-drag;
+      }
+      form {
+        width: 30%;
+        margin-top: 2em;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      input[type='text'] {
+        width: 100%;
+        display: block;
+        color: #ddd;
+        border: none;
+        margin-top: 1em;
+        padding: 0;
+        border-radius: 0;
+        outline: none;
+        min-width: 100%;
+        font-size: 1rem;
+        line-height: 2.5em;
+        font-family: 'Roboto', Arial, sans-serif;
+        border-bottom: 1px solid #fc3;
+        background-color: transparent;
+      }
+      input[type='submit'] {
+        padding: 12px 30px;
+        background: #fc3;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        margin-top: 1.5em;
+        cursor: pointer;
+      }
+      .wrap-pass {
+        margin-top: 3em;
+        background: #212121;
+        width: 45%;
+        padding: 15px 35px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #password {
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Courier, 'New Courier', monospace;
+        font-size: 18px;
+      }
+      #close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 999999;
+        background: transparent;
+        border: none;
+        color: #757575;
+        cursor: pointer;
+        -webkit-app-region: no-drag;
+        }
+      footer {
+          position: relative;
+          text-align: center;
+          margin-top: 4em;
+          font-size: 12px;
+          color: #616161;
+      }
+  </style>
+  <body>  
+    <button id="close"><i class="material-icons">&#xE14C;</i></button>
+    <div class="wrapper">
+        <h1 style="font-weight: 700">Jumble Password</h1>
+        <p style="font-weight: 300">A small tool to generate passwords from your name &amp; birth dates.</p>
+        <form id="form">
+            <input id="name" type="text" placeholder="Your name" class="name" required>
+    
+            <input id="dob" type="text" placeholder="DD/MM/YYYY" class="date" required><br>
+            <input type="submit" id="submitBtn" class="btn" />
+        </form>
+        
+        <div class="wrap-pass">
+            <code id="password"></code>
+        </div>
+        <footer>
+            Made with ❤️ by <a style="cursor: pointer;" id="author">Idrees Dargahwala</a>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
