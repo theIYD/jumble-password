@@ -1,4 +1,4 @@
-# ![jumble](https://github.com/theIYD/jumble-password/blob/master/media/logo.png)
+# ![jumble](https://github.com/Arslanshn/jumble-password/blob/master/media/Logo.png?raw=true)
 
 [![GitHub issues](https://img.shields.io/github/issues/theIYD/jumble-password.svg)](https://github.com/theIYD/jumble-password/issues)
 
