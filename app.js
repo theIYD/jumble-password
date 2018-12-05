@@ -6,6 +6,7 @@ const Jumble = require('./api/api');
 
 const form = document.querySelector('#form');
 const submit = document.querySelector('#submitBtn');
+const reset = document.querySelector('#resetBtn');
 const passDiv = document.querySelector('#password');
 const author = document.querySelector('#author');
 const closeBtn = document.querySelector('#close');
@@ -48,4 +49,8 @@ function parseDate(str){
       }
     }
     return false;
+}
+//create function Cleare
+function cls(){
+document.getElementById('pas').innerHTML = '';
 }
