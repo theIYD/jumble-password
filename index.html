@@ -10,7 +10,7 @@
     <script src="../jquery.maskedinput.js" type="text/javascript"></script>
     <!--Create mask  -->
     <script type="text/javascript">
-      jQuery(function() {$("#dob").mask("99/99/9999", {placeholder: "dd/mm/year" });});
+      jQuery(function() {$("#dob").mask("99/99/9999", {placeholder: "DD/MM/YYYY" });});
     </script>
   </head>
   <style>
@@ -110,7 +110,7 @@
         <p style="font-weight: 300">A small tool to generate passwords from your name &amp; birth dates.</p>
         <form id="form">
             <input id="name" type="text" placeholder="Your name" class="name" required>
-            <input id="dob" type="text" class="date" required><br>
+            <input id="dob" type="text" placeholder="DD/MM/YYYY" class="date" required><br>
             <input type="submit" id="submitBtn" class="btn" />
             <!-- add button -->
             <input onClick="cls();" type="reset" id="resetBtn" class="btn" />
