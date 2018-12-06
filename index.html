@@ -5,6 +5,13 @@
     <title>Hello World!</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
+    <!-- Connect jQuery and jQuery.maskedinput -->
+    <script src="../jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../jquery.maskedinput.js" type="text/javascript"></script>
+    <!--Create mask  -->
+    <script type="text/javascript">
+      jQuery(function() {$("#dob").mask("99/99/9999", {placeholder: "DD/MM/YYYY" });});
+    </script>
   </head>
   <style>
       html {
@@ -52,6 +59,15 @@
         margin-top: 1.5em;
         cursor: pointer;
       }
+      input[type='reset'] {
+      padding: 12px 30px;
+      background: #fc3;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      margin-top: 1.5em;
+      cursor: pointer;
+      }
       .wrap-pass {
         margin-top: 3em;
         background: #212121;
@@ -60,7 +76,6 @@
         margin-left: auto;
         margin-right: auto;
       }
-
       #password {
         text-align: center;
         width: 100%;
@@ -95,9 +110,10 @@
         <p style="font-weight: 300">A small tool to generate passwords from your name &amp; birth dates.</p>
         <form id="form">
             <input id="name" type="text" placeholder="Your name" class="name" required>
-    
             <input id="dob" type="text" placeholder="DD/MM/YYYY" class="date" required><br>
             <input type="submit" id="submitBtn" class="btn" />
+            <!-- add button -->
+            <input onClick="cls();" type="reset" id="resetBtn" class="btn" />
         </form>
         
         <div class="wrap-pass">
